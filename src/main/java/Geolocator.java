@@ -10,11 +10,6 @@ public class Geolocator {
         this.direction = null;
     }
 
-    public Geolocator(Point position, Direction direction) {
-        this.position = position;
-        this.direction = direction;
-    }
-
     public void setPosition(Point position) {
         this.position = position;
     }

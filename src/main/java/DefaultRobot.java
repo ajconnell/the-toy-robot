@@ -5,7 +5,7 @@ public class DefaultRobot implements Robot {
     private final Geolocator geolocator;
 
     public DefaultRobot() {
-        this.geolocator = new Geolocator(null, null);
+        this.geolocator = new Geolocator();
     }
 
     @Override
