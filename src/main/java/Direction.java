@@ -2,6 +2,7 @@ public enum Direction {
 
     NORTH(0), EAST(90), SOUTH(180), WEST(270);
 
+    private static final int FULL_REVOLUTION = 360;
     private final int degrees;
 
     Direction(int degrees) {
@@ -13,7 +14,7 @@ public enum Direction {
     }
 
     static Direction getDirectionForDegrees(int degrees) {
-        switch (degrees % 360) {
+        switch ((FULL_REVOLUTION + degrees) % FULL_REVOLUTION) {
             case 0:
                 return NORTH;
             case 90:

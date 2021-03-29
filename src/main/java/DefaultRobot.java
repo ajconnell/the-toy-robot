@@ -26,7 +26,7 @@ public class DefaultRobot implements GeolocatableRobot {
     @Override
     public void left() {
         int currentDegrees = geolocator.getDirection().getDegrees();
-        geolocator.setDirection(Direction.getDirectionForDegrees(currentDegrees - NINETY_DEGREES));
+        geolocator.setDirection(Direction.getDirectionForDegrees((currentDegrees - NINETY_DEGREES)));
     }
 
     @Override
