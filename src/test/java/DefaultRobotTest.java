@@ -27,8 +27,8 @@ class DefaultRobotTest {
 
     @Test
     public void assertMoveDoesNotThrowIllegalArgumentException() {
-        int xPosition = 10;
-        int yPosition = 5;
+        int xPosition = 4;
+        int yPosition = 4;
         Direction south = Direction.SOUTH;
 
         DefaultRobot robot = new DefaultRobot();
@@ -41,7 +41,7 @@ class DefaultRobotTest {
 
     @Test
     public void assertLeftDoesNotThrowIllegalArgumentException() {
-        int xPosition = 5;
+        int xPosition = 4;
         int yPosition = 0;
         Direction north = Direction.NORTH;
 
@@ -54,7 +54,7 @@ class DefaultRobotTest {
 
     @Test
     public void assertRightDoesNotThrowIllegalArgumentException() {
-        int xPosition = 8;
+        int xPosition = 4;
         int yPosition = 2;
         Direction west = Direction.WEST;
 
