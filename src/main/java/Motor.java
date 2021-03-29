@@ -1,5 +1,3 @@
-import java.awt.*;
-
 public interface Motor {
 
     default void move(Geolocator geolocator) {
