@@ -2,18 +2,16 @@ import java.awt.*;
 
 public class DefaultRobot implements Robot {
 
-    private Point position;
-    private Direction direction;
+    private final Geolocator geolocator;
 
     public DefaultRobot() {
-        this.position = null;
-        this.direction = null;
+        this.geolocator = new Geolocator(null, null);
     }
 
     @Override
     public void place(int xPosition, int yPosition, Direction direction) {
-        this.position = new Point(xPosition, yPosition);
-        this.direction = direction;
+        geolocator.setPosition(new Point(xPosition, yPosition));
+        geolocator.setDirection(direction);
     }
 
     @Override
