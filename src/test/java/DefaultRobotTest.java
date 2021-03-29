@@ -12,6 +12,20 @@ class DefaultRobotTest {
     }
 
     @Test
+    public void assertPlaceCorrectlyPositionsRobot() {
+        int xPosition = 4;
+        int yPosition = 2;
+        Direction west = Direction.WEST;
+
+        DefaultRobot robot = new DefaultRobot();
+        robot.place(xPosition, yPosition, west);
+
+        Assertions.assertEquals(xPosition, robot.getPosition().x);
+        Assertions.assertEquals(yPosition, robot.getPosition().y);
+        Assertions.assertEquals(west, robot.getDirection());
+    }
+
+    @Test
     public void assertMoveDoesNotThrowIllegalArgumentException() {
         DefaultRobot robot = new DefaultRobot();
         Assertions.assertDoesNotThrow(robot::move);

@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class DefaultRobot implements Robot {
+public class DefaultRobot implements GeolocatableRobot {
 
     private final Geolocator geolocator;
 
@@ -27,6 +27,16 @@ public class DefaultRobot implements Robot {
     @Override
     public void right() {
 
+    }
+
+    @Override
+    public Point getPosition() {
+        return geolocator.getPosition();
+    }
+
+    @Override
+    public Direction getDirection() {
+        return geolocator.getDirection();
     }
 
 }
