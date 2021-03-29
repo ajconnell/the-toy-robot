@@ -1,6 +1,6 @@
 public interface Robot {
 
-    default void place() {
+    default void place(int xPosition, int yPosition, Direction direction) {
         throw new IllegalArgumentException("Behaviour for <place> method not defined.");
     }
 

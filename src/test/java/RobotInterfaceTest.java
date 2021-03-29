@@ -8,7 +8,9 @@ public class RobotInterfaceTest {
     @Test
     public void assertDefaultPlaceThrowsIllegalArgumentException() {
         Robot robotInterface = spy(Robot.class);
-        Assertions.assertThrows(IllegalArgumentException.class, robotInterface::place);
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            robotInterface.place(0, 0, Direction.NORTH);
+        });
     }
 
     @Test

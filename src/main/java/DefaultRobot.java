@@ -1,7 +1,7 @@
 public class DefaultRobot implements Robot {
 
     @Override
-    public void place() {
+    public void place(int xPosition, int yPosition, Direction direction) {
 
     }
 

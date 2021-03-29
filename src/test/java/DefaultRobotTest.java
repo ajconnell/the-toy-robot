@@ -6,7 +6,9 @@ class DefaultRobotTest {
     @Test
     public void assertPlaceDoesNotThrowIllegalArgumentException() {
         DefaultRobot robot = new DefaultRobot();
-        Assertions.assertDoesNotThrow(robot::place);
+        Assertions.assertDoesNotThrow(() -> {
+            robot.place(0, 0, Direction.NORTH);
+        });
     }
 
     @Test
